@@ -1,0 +1,122 @@
+.inputContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -1.5rem;
+  margin-bottom: 4rem;
+}
+
+.addTask {
+  width: 40rem;
+  height: 3.25rem;
+  margin-right: .5rem;
+  border-radius: 8px;
+  padding: 1rem;
+  
+  background-color: var(--gray-500);
+  border: 1px solid var(--gray-700);
+
+  color: var(--white);
+}
+
+.addButton {
+  width: 5.62rem;
+  height: 3.25rem;
+  border-radius: 8px;
+  padding: 1rem;
+  border: none;
+  
+  background-color: var(--blue-dark);
+  color: var(--white);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: background-color 0.1s;
+
+  cursor: pointer;
+}
+
+.addButton:not(:disabled):hover {
+  background-color: var(--blue);
+}
+
+.addButton:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.todos {
+  width: 100%;
+  max-width: 46rem;
+  margin: 0 auto;
+  margin-top: 5.625rem;
+  padding: 0 1rem;
+}
+
+.todosHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.createdTodos {
+  color: var(--blue);
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.createdTodosCounting {
+  padding: .1rem .5rem ;
+  margin-left: .5rem;
+  border-radius: 50%;
+  background-color: var(--gray-400);
+
+  color: var(--gray-200);
+  font-size: 12px;
+}
+
+.doneTodosCounting {
+  padding: .1rem .5rem ;
+  margin-left: .5rem;
+  border-radius: .5rem;
+  background-color: var(--gray-400);
+
+  color: var(--gray-200);
+  font-size: 12px;
+}
+
+.doneTodos {
+  color: var(--purple);
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.taskBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: .5rem;
+  margin-top: 1.5rem;
+}
+
+.empyt {
+  margin-top: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+  color: var(--gray-300);
+  text-align: center;
+}
+
+.empyt svr {
+  opacity: 0.3;
+}
+
+.empyt p {
+  font-weight: 700;
+}
