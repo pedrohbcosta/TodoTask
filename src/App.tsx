@@ -33,6 +33,21 @@ export function App() {
     setTask('');
   }
 
+  const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
+    if (event.key === 'Escape') {
+      setTask('');
+    } else if (event.key === 'Enter') {
+      
+      const idRandom = (num: number) => Math.floor(Math.random() * num)
+
+      const newTask = { id : idRandom(999999), nameTask : task, isCompleted: false }
+
+      setTodo([...todo, newTask]);
+
+      setTask('');
+    }
+  }
+
   function handleInvalidTask(event: ChangeEvent<HTMLInputElement>) {
     event.target.setCustomValidity('Este campo deve ser preenchido!')
   }
@@ -67,6 +82,7 @@ export function App() {
             placeholder='Adicione uma nova tarefa'
             value={task}
             onChange={handleNewTask}
+            onKeyDown={handleKeyDown}
             onInvalid={handleInvalidTask}
             required/>
           
